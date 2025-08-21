@@ -1,29 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórias Profissionais - Compartilhe sua jornada</title>
-    <meta name="description" content="Plataforma onde profissionais compartilham suas jornadas de carreira para inspirar e orientar outros" />
-    <meta name="author" content="Histórias Profissionais" />
+    <meta name="description" content="Plataforma onde profissionais compartilham suas jornadas de carreira para inspirar e orientar outros">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                    </svg>
+                    Histórias Profissionais
+                </a>
+                <div class="nav-links">
+                    <a href="historias.html" class="nav-link">Histórias</a>
+                    <a href="escrever.html" class="nav-link">Escrever</a>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn btn-ghost">Entrar</a>
+                        <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-    <meta property="og:title" content="2517d198-3547-4b52-8f54-8347f58a914a" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Compartilhe sua jornada,
+                        <span class="text-gradient">inspire o futuro</span>
+                    </h1>
+                    <p class="hero-description">
+                        Uma plataforma onde profissionais compartilham suas experiências de carreira 
+                        para orientar e inspirar a próxima geração de talentos.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="historias.html" class="btn btn-primary btn-lg">
+                            Explorar Histórias
+                        </a>
+                        <a href="cadastro.html" class="btn btn-outline btn-lg">
+                            Junte-se à Comunidade
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-image.jpg" alt="Profissionais colaborando" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <h2 class="section-title">Por que compartilhar sua história?</h2>
+                <p class="section-description">
+                    Sua experiência pode ser a orientação que alguém precisa para dar o próximo passo na carreira
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Inspire Outros</h3>
+                    <p class="feature-description">
+                        Sua jornada pode motivar outros profissionais a perseguirem seus objetivos e superarem desafios similares.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 2-5 10-4-3Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Construa Networking</h3>
+                    <p class="feature-description">
+                        Conecte-se com profissionais que compartilham interesses similares e construa relacionamentos valiosos.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Desenvolva Liderança</h3>
+                    <p class="feature-description">
+                        Compartilhar conhecimento é uma das principais características de grandes líderes e mentores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Como funciona</h2>
+                <p class="section-description">
+                    Três passos simples para começar a compartilhar sua experiência
+                </p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Cadastre-se</h3>
+                        <p class="step-description">
+                            Crie sua conta gratuitamente e junte-se à nossa comunidade de profissionais.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Escreva sua História</h3>
+                        <p class="step-description">
+                            Use nosso editor intuitivo para compartilhar sua jornada, desafios e aprendizados.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Inspire e Conecte</h3>
+                        <p class="step-description">
+                            Sua história será vista por outros profissionais e você poderá interagir com a comunidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para compartilhar sua história?</h2>
+                <p class="cta-description">
+                    Junte-se a centenas de profissionais que já estão inspirando outros com suas jornadas
+                </p>
+                <a href="cadastro.html" class="btn btn-primary btn-lg">
+                    Começar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                        </svg>
+                        Histórias Profissionais
+                    </div>
+                    <p class="footer-description">
+                        Conectando profissionais através de histórias inspiradoras
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="historias.html">Histórias</a>
+                    <a href="escrever.html">Escrever</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Histórias Profissionais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
